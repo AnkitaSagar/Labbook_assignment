@@ -1,0 +1,23 @@
+package com.cg.a4.ui;
+
+import java.util.Scanner;
+
+public class Abbreviated {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		String string = scan.nextLine();
+		String newString="";
+		newString=string.charAt(0)+".";
+		for(int i=0;i<string.length();i++) {
+			char index=string.charAt(i);
+			if(Character.isWhitespace(index)) {
+				char nextIndex=string.charAt(i+1);
+				newString=newString+nextIndex+".";
+			}
+		}
+		System.out.println("the abbreviated form is " + newString.substring(0,newString.length()-1));
+		scan.close();
+	}
+
+}

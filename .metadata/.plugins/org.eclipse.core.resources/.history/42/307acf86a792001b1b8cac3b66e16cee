@@ -1,0 +1,29 @@
+package com.cg.a4.ui;
+
+import java.util.Scanner;
+
+public class SumString {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		String string = scan.nextLine();
+		int upperCase=0, lowerCase=0, digit=0, spaces=0;
+		for(int i=0;i<string.length();i++) {
+			char index=string.charAt(i);
+			if(Character.isUpperCase(index))
+				upperCase++;
+			else if(Character.isLowerCase(index))
+				lowerCase++;
+			else if(Character.isDigit(index))
+				digit++;
+			else if(Character.isWhitespace(index))
+				spaces++;
+		}
+		System.out.println("The number of Uppercase letters are " + upperCase);
+		System.out.println("The number of Lowercase letters are " + lowerCase);
+		System.out.println("The number of Digit are " + digit);
+		System.out.println("The number of spaces are " + spaces);
+		scan.close();
+	}
+
+}

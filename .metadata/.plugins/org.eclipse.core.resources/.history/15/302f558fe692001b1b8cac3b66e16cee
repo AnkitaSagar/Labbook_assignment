@@ -1,0 +1,4 @@
+public interface IFindFactorial {
+
+	int getFactorial(int num);
+}

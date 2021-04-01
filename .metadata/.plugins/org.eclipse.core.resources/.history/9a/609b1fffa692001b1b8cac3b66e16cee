@@ -1,0 +1,27 @@
+package com.cg.a2.ui;
+
+import java.util.Scanner;
+
+public class Unique {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int number=scan.nextInt();
+		int newNumber=number;
+		int d=0, r=0, unitDigit=0, result=0;
+		unitDigit=number%10;
+		while(number>0)
+		{
+			d=number%10;
+			r=r*10+d;
+			number/=10;
+		}
+		result=newNumber*unitDigit;
+		if(result==r)
+			System.out.println("It is a unique number");
+		else
+			System.out.println("It is not a unique number");
+		scan.close();
+	}
+
+}

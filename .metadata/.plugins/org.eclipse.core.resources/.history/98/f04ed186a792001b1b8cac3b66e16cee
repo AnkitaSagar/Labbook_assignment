@@ -1,0 +1,18 @@
+package com.cg.a4.ui;
+import java.util.*;
+public class PriorityQueueDemo {
+
+	public static void main(String[] args) {
+		PriorityQueue<Integer> pQueue=new PriorityQueue<>();
+		pQueue.add(5);
+		pQueue.add(10);
+		System.out.println(pQueue);
+		pQueue.offer(15);
+		System.out.println(pQueue);
+		pQueue.add(3);
+		System.out.println(pQueue);
+		System.out.println(pQueue.peek());
+		System.out.println(pQueue.poll());
+	}
+
+}

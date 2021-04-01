@@ -1,0 +1,24 @@
+package com.cg.a4.ui;
+
+import java.util.Scanner;
+
+public class VowelsAndConsonants {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		String string = scan.next();
+		int vowels=0, consonants=0;
+		for(int i=0;i<string.length();i++) {
+			char index=string.charAt(i);
+			if(index=='A' || index=='a' || index=='E' || index=='e' || index=='I' || index=='i' || index=='O' || index=='o' || index=='U' || index=='u') {
+				vowels++;
+			}
+			else
+				consonants++;
+		}
+		System.out.println("The total vowels in the string is " + vowels + " and the total consonants are " + consonants);
+		scan.close();
+
+	}
+
+}

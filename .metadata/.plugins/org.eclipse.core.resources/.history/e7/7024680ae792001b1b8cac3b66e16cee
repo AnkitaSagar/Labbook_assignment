@@ -1,0 +1,5 @@
+package com.cg.a9.service;
+public interface ISameName {
+
+	boolean isSame(String name);
+}

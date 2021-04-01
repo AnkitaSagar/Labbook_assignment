@@ -1,0 +1,30 @@
+package com.cg.a2.ui;
+
+import java.util.Scanner;
+
+public class LcmAndGcd {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int number1=scan.nextInt();
+		int number2=scan.nextInt();
+		int number=0 , gcd=0;
+		if(number1>number2)
+			number=number1;
+		else
+			number=number2;
+		while(true)
+		{
+			if(number%number1==0 && number%number2==0)
+			{
+				System.out.println("The LCM of the 2 numbers " + number1 + " and " + number2 +" is " + number);
+				break;
+			}
+			number++;
+		}
+		gcd=(number1*number2)/number;
+		System.out.println("The GCD of the 2 numbers " + number1 + " and " + number2 +" is " + gcd);
+		scan.close();
+	}
+
+}

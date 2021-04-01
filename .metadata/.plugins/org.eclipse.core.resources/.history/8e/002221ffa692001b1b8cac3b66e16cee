@@ -1,0 +1,27 @@
+package com.cg.a2.ui;
+
+import java.util.Scanner;
+
+public class Armstrong {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int number=scan.nextInt();
+		int newNumber=number;
+		int cube=0, sum=0, d=0;
+		while(number>0)
+		{
+			d=number%10;
+			cube=d*d*d;
+			sum+=cube;
+			number/=10;
+		}
+		if(sum==newNumber)
+			System.out.println("It is armstrong");
+		else
+			System.out.println("It is not armstrong");
+		scan.close();
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.cg.a9.service;
+public interface IFindFactorial {
+
+	int getFactorial(int num);
+}

@@ -1,0 +1,24 @@
+package com.cg.a9.ui;
+public class ConcurrentPatternsExerciseApp {
+
+	public static boolean isValid(String userName) {
+		//boolean isValid=false;
+		Pattern userNamePattern=Pattern.compile("[A-Za-z]{8,}_job$");
+		Matcher userNameMatcher=userNamePattern.matcher(userName);
+		return userNameMatcher.matches();
+	}
+	public static void main(String[] args) {
+		
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the User Name : ");
+		String userName=scan.next();
+		if(isValid(userName)) {
+			System.out.println("UserName Accepted");
+		}else {
+			System.out.println("UserName Rejected");
+		}
+
+		scan.close();
+	}
+
+}

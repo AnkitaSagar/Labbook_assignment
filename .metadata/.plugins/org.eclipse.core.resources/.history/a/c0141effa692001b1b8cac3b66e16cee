@@ -1,0 +1,26 @@
+package com.cg.a2.ui;
+import java.util.Scanner;
+public class StrongNumber {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int number=scan.nextInt();
+		int newNumber=number;
+		int f=1, sum=0, d=0;
+		while(number>0)
+		{
+			d=number%10;
+			f=1;
+			for(int i=1;i<=d;i++)
+				f=f*i;
+			sum+=f;
+			number/=10;
+		}
+		if(sum==newNumber)
+			System.out.println("It is a strong number");
+		else
+			System.out.println("It is not a strong number");
+		scan.close();
+	}
+
+}

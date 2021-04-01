@@ -1,0 +1,3 @@
+public enum AppMenu {
+	ADD,REMOVE,LIST,SEARCH,QUIT;
+}

@@ -1,0 +1,18 @@
+package com.cg.a4.ui;
+
+import java.util.Scanner;
+
+public class SearchString {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		String string =scan.nextLine();
+		String search=scan.nextLine();
+		if(string.contains(search))
+			System.out.println("The searched string is found");
+		else
+			System.out.println("The searched string is not found");
+		scan.close();
+	}
+
+}

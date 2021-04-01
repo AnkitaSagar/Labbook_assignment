@@ -1,0 +1,22 @@
+package com.cg.a2.ui;
+import java.util.Scanner;
+public class DigitInWords {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int number=scan.nextInt();
+		String a[]={"ZERO","ONE","TWO","THREE","FOUR","FIVE","SIX","SEVEN","EIGHT","NINE"};
+		String newString="";
+		int d=0;
+		while(number>0)
+		{
+			d=number%10;
+			newString=a[d]+" "+newString;
+			number/=10;
+		}
+		System.out.println(newString);
+		scan.close();
+
+	}
+
+}

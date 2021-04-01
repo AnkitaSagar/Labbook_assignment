@@ -1,0 +1,33 @@
+package com.cg.a4.ui;
+
+import java.io.*;
+public class NumberOfCharacters {
+
+	public static void main(String[] args) {
+		int lines=0, countWord=0, characters=0;
+		try(FileReader fileReader=new FileReader("name.txt");
+				BufferedReader br=new BufferedReader(fileReader)) {
+			
+			while(true) {
+				String line=br.readLine();
+				lines++;
+				String words[]=line.split(" ");
+				countWord+=words.length;
+				for(String i:words)
+					characters+=i.length();
+			}
+		}
+		catch (FileNotFoundException excep) {
+			System.out.println("No such File present ");
+		}
+		catch (IOException excep) {
+			System.out.println("Could not read file. ");
+		}
+		
+		System.out.println("Total number of lines are " + lines);
+		System.out.println("Total number of words are " + countWord);
+		System.out.println("Total number of characters are " + characters);
+
+	}
+
+}

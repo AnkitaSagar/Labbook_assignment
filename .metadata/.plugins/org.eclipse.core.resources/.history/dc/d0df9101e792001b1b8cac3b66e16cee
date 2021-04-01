@@ -1,0 +1,4 @@
+public interface ISameName {
+
+	boolean isSame(String name);
+}

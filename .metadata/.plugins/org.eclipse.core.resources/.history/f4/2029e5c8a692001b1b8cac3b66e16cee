@@ -1,0 +1,45 @@
+package com.cg.a1.ui;
+
+import java.util.Scanner;
+
+public class Quadratic {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		double a=sc.nextDouble();
+		double b=sc.nextDouble();
+		double c=sc.nextDouble();
+		double roots = b*b - (4*a*c);
+		double root1, root2;
+		int flag=1;
+		if(roots > 0)
+		{
+			root1 = (-b + Math.sqrt(roots))/ (2*a);
+			root2 = (-b - Math.sqrt(roots))/ (2*a);
+			flag=0;
+		}
+		else if(roots == 0)
+		{
+			root1 = -b / (2*a);
+			root2=root1;
+			flag=0;
+		}
+		else
+		{
+			root1 = -b / (2*a);
+			root2 = Math.sqrt(-roots) / (2*a);
+			flag=1;
+		}
+		if(flag==1)
+		{
+			System.out.format("root1 = %.2f+%.2fi ", root1, root2);
+			System.out.format("root2 = %.2f+%.2fi ", root1, root2);
+		}
+		else{
+			System.out.format("root1 = %.2f", root1);
+			System.out.format("root1 = %.2f", root2);
+		}
+		sc.close();
+	}
+
+}
